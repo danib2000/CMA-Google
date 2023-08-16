@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google-like Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-family: arial, sans-serif;
+        color: #202124;
+      }
+      #logo {
+        font-size: 80px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      #search-bar {
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 15px;
+        width: 70%;
+        font-size: 18px;
+      }
+      #search-btn {
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 15px 20px;
+        margin-top: 15px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+      #footer {
+        background-color: #f2f2f2;
+        text-align: left;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        flex-shrink: 0;
+        box-sizing: border-box;
+      }
+
+      .upper-footer {
+        padding: 15px 30px;
+        border-bottom: 1px solid #dadce0;
+        font-size: 15px;
+        color: #70757a;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .lower-footer {
+        padding: 15px 30px;
+        font-size: 15px;
+        color: #70757a;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .inner-lower-footer {
+        color: #70757a;
+        padding: 20px;
+      }
+      a.inner-lower-footer {
+        text-decoration: none;
+      }
+      a.inner-lower-footer:hover {
+        text-decoration: underline;
+      }
+      .offers {
+        text-align: center;
+      }
+      .inside-offer {
+        color: blue;
+        text-decoration: none;
+      }
+      .inside-offer:hover {
+        text-decoration: underline;
+      }
+      .search {
+        height: 70px;
+        padding-top: 8%;
+      }
+      .buttons {
+        background-color: #f8f9fa;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+        color: #3c4043;
+        font-family: arial, sans-serif;
+        font-size: 14px;
+        margin: 11px 4px;
+        padding: 0 16px;
+        line-height: 27px;
+        height: 36px;
+        min-width: 54px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+      }
+      .buttons:hover {
+        border-color: #333;
+      }
+      #header-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end; /* Align the header to the right */
+        padding: 10px 20px;
+        box-sizing: border-box; /* Include padding and border in the width */
+      }
+      #buttons {
+        display: flex;
+        align-items: center;
+      }
+      .header-button {
+        margin: 0 10px;
+        font-size: 14px;
+        text-decoration: none;
+        color: #333;
+      }
+      #profile-picture {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-left: 10px;
+      }
+      /* Add styles for the More Options button */
+      .header-button.more-options {
+        display: flex;
+        align-items: center;
+      }
+      .header-button.more-options .dots {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: #333;
+        border-radius: 50%;
+        margin-left: 5px;
+      }
+      .sign-in-button {
+        background-color: #4285f4;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin: 5px;
+      }
+      .bento-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  height : 22px;
+  width : 22px;
+}
+
+.bento-dot {
+  width : 6px;
+  height: 6px;
+  border-radius: 999px;
+  background:#000000;
+  overflow: hidden;
+}
+    </style>
+  </head>
+  <body>
+    <div id="header-container">
+      <div id="header">
+        <div id="buttons">
+          <a href="#" class="header-button">Gmail</a>
+          <a href="#" class="header-button">Images</a>
+              <div class="bento-menu">
+                <div class="bento-dot"></div>
+                <div class="bento-dot"></div>
+                <div class="bento-dot"></div>
+                <div class="bento-dot"></div>
+                <div class="bento-dot"></div>
+                <div class="bento-dot"></div>
+                <div class="bento-dot"></div>
+                <div class="bento-dot"></div>
+                <div class="bento-dot"></div>
+              </div>
+              <button class="sign-in-button">Sign In</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="logo">Google</div>
+    <div>
+      <input
+        type="text"
+        id="search-bar"
+        placeholder="Search Google or type a URL"
+      />
+      <div class="search">
+        <input
+          class="buttons"
+          value="Google Search"
+          aria-label="Google Search"
+          name="btn1"
+          role="button"
+          type="submit"
+        />
+        <input
+          class="buttons"
+          value="I'm Feeling Lucky"
+          aria-label="I'm Feeling Lucky"
+          name="btn2"
+          type="submit"
+        />
+      </div>
+    </div>
+    <div class="offers">
+      Google offered in:
+      <a class="inside-offer" dir="rtl">עברית</a>
+      <a class="inside-offer" dir="rtl">العربية</a>
+    </div>
+    <div id="footer">
+      <div class="upper-footer">Israel</div>
+      <div class="lower-footer">
+        <div class="left-lower-footer">
+          <a
+            class="inner-lower-footer"
+            href="https://about.google/?utm_source=google-IL&utm_medium=referral&utm_campaign=hp-footer&fg=1"
+            >About</a
+          >
+          <a
+            class="inner-lower-footer"
+            href="https://www.google.com/intl/en_il/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1"
+            >Advertising</a
+          >
+          <a
+            class="inner-lower-footer"
+            href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1"
+            >Business</a
+          >
+          <a
+            class="inner-lower-footer"
+            href="https://google.com/search/howsearchworks/?fg=1"
+          >
+            How Search works
+          </a>
+        </div>
+        <div class="right-lower-footer">
+          <a
+            class="inner-lower-footer"
+            href="https://policies.google.com/privacy?hl=en-IL&fg=1"
+            >Privecy</a
+          >
+          <a
+            class="inner-lower-footer"
+            href="https://policies.google.com/terms?hl=en-IL&fg=1"
+            >Terms</a
+          >
+          <a class="inner-lower-footer">Settings </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
