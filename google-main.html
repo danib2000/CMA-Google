@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google-like Page</title>
     <style>
@@ -16,11 +20,6 @@
         font-size: 14px;
         font-family: arial, sans-serif;
         color: #202124;
-      }
-      #logo {
-        font-size: 80px;
-        font-weight: bold;
-        margin-bottom: 20px;
       }
       #search-bar {
         border: 1px solid #ccc;
@@ -59,8 +58,8 @@
       }
 
       .lower-footer {
-        padding: 15px 30px;
-        font-size: 15px;
+        padding: 15px ;
+        font-size: 14px;
         color: #70757a;
         display: flex;
         flex-wrap: wrap;
@@ -68,10 +67,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        text-align: left;
       }
       .inner-lower-footer {
         color: #70757a;
-        padding: 20px;
+        padding: 13px;
       }
       a.inner-lower-footer {
         text-decoration: none;
@@ -90,8 +90,31 @@
         text-decoration: underline;
       }
       .search {
-        height: 70px;
-        padding-top: 8%;
+        text-align: center;
+      }
+      .search-bar-container {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        padding: 5px;
+        width: 570px;
+        height: 40px; /* Adjust the height of the search bar */
+      }
+      .search-bar-input {
+        flex: 1;
+        border: none;
+        padding: 5px 10px;
+        font-size: 16px; /* Adjust the font size of the search bar text */
+        outline: none;
+      }
+      .search-icon {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+        margin-left: 2%;
+        fill: gray;
       }
       .buttons {
         background-color: #f8f9fa;
@@ -108,6 +131,8 @@
         text-align: center;
         cursor: pointer;
         user-select: none;
+        margin-top: 5%;
+        margin-bottom: 5%;
       }
       .buttons:hover {
         border-color: #333;
@@ -158,22 +183,35 @@
         margin: 5px;
       }
       .bento-menu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 2px;
-  grid-row-gap: 2px;
-  height : 22px;
-  width : 22px;
-}
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 2px;
+        grid-row-gap: 2px;
+        height: 22px;
+        width: 22px;
+      }
 
-.bento-dot {
-  width : 6px;
-  height: 6px;
-  border-radius: 999px;
-  background:#000000;
-  overflow: hidden;
-}
+      .bento-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: #000000;
+        overflow: hidden;
+      }
+      .material-symbols-outlined {
+        padding: 5px;
+      }
+      .microphone-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+        fill: #555;
+      }
+      .google-logo {
+
+      margin: 10px;
+    }
     </style>
   </head>
   <body>
@@ -182,30 +220,30 @@
         <div id="buttons">
           <a href="#" class="header-button">Gmail</a>
           <a href="#" class="header-button">Images</a>
-              <div class="bento-menu">
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-              </div>
-              <button class="sign-in-button">Sign In</button>
-
-          </div>
+          <span class="material-symbols-outlined"> apps </span>
+          <button class="sign-in-button">Sign In</button>
         </div>
       </div>
     </div>
-    <div id="logo">Google</div>
+    <img src="/logo.png" alt="Google Logo" class="google-logo">
     <div>
-      <input
-        type="text"
-        id="search-bar"
-        placeholder="Search Google or type a URL"
-      />
+      <div class="search-bar-container">
+        <span class="material-symbols-outlined">
+          search
+          </span>
+        <input
+          type="text"
+          class="search-bar-input"
+          placeholder="Search Google or type a URL"
+        />
+        <span class="material-symbols-outlined">
+          mic
+          </span>
+          <span class="material-symbols-outlined">
+            image_search
+            </span>
+        </svg>
+      </div>
       <div class="search">
         <input
           class="buttons"
